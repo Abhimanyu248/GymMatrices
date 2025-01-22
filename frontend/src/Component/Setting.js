@@ -4,7 +4,7 @@ import axios from 'axios';
 const Setting = () => {
   const handleDownloadExcel = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/generate/excel', {
+      const response = await axios.get('https://www.abhifitness.me/generate/excel', {
          withCredentials:true, responseType: 'blob' // Ensures the response is treated as a Blob (binary file)
       });
       console.log(response);

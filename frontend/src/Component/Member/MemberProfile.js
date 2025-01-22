@@ -21,7 +21,7 @@ const MemberProfile = () => {
   const fetchMember = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:4000/members/get-member/${id}`, {
+      const res = await axios.get(`https://www.abhifitness.me/members/get-member/${id}`, {
         withCredentials: true,
       });
       setMember(res.data.member);
@@ -71,7 +71,7 @@ const MemberProfile = () => {
   const handleEditSubmit = async (updatedDetails) => {
     try {
       const res = await axios.put(
-        `http://localhost:4000/members/update-member/${member._id}`,
+        `https://www.abhifitness.me/members/update-member/${member._id}`,
         updatedDetails,
         { withCredentials: true }
       );
@@ -89,7 +89,7 @@ const MemberProfile = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:4000/members/renew-membership/${member._id}`,
+        `https://www.abhifitness.me/members/renew-membership/${member._id}`,
         formData,
         { withCredentials: true }
       );

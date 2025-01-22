@@ -24,7 +24,7 @@ const Members = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/members/get-members", {
+        const res = await axios.get("https://www.abhifitness.me/members/get-members", {
           withCredentials: true,
         });
         // toast.success(res.data.message);
@@ -81,7 +81,7 @@ const Members = () => {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:4000/members/delete-member/${memberToDelete}`,
+        `https://www.abhifitness.me/members/delete-member/${memberToDelete}`,
         {
           withCredentials: true,
         }

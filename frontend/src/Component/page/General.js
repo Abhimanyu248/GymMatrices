@@ -23,7 +23,7 @@ const General = () => {
     // Fetch all members
     const fetchMembers = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/members/get-members', { withCredentials: true });
+        const res = await axios.get('https://www.abhifitness.me/members/get-members', { withCredentials: true });
         setMembers(res.data.members);
         setLoading(false);
       } catch (error) {
@@ -42,7 +42,7 @@ const General = () => {
   useEffect(() => {
     const fetchMonthlyRevenue = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/general/monthly-revenue');
+        const response = await axios.get('https://www.abhifitness.me/general/monthly-revenue');
         setMonthlyRevenue(response.data.totalMonthlyCollection); // Assuming the API returns totalRevenue
       } catch (error) {
         console.error("Error fetching monthly revenue:", error);

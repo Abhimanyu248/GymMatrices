@@ -20,7 +20,7 @@ const SignupForm = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/auth/register", formData).then((res) => {
+    await axios.post("https://www.abhifitness.me/auth/register", formData).then((res) => {
       console.log(res);
       toast.success("Signup Successful");
     }).catch((err) => {

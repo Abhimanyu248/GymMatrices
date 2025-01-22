@@ -9,7 +9,7 @@ const RevenueDashboard = () => {
     useEffect(() => {
         const fetchRevenueData = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/general/total-revenue'); // Adjust the API endpoint as needed
+                const response = await axios.get('https://www.abhifitness.me/general/total-revenue'); // Adjust the API endpoint as needed
                 setYearlyRevenue(response.data.yearlyRevenue);
                 setTotalCollection(response.data.totalCollection);
             } catch (error) {

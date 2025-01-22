@@ -25,7 +25,7 @@ const AddMemberForm = () => {
 
   //fetching membership
   const fetchmemberships = async () => {
-    await axios.get("http://localhost:4000/plans/getmembership", { withCredentials: true }).then((res) => {
+    await axios.get("https://www.abhifitness.me/plans/getmembership", { withCredentials: true }).then((res) => {
       setMembershiplist(res.data.membership);
       if(res.data.membership.length === 0){
         toast.error("No memberships found!");
@@ -74,7 +74,7 @@ const AddMemberForm = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:4000/members/register-member", formData, { withCredentials: true }).then((res) => {
+    await axios.post("https://www.abhifitness.me/members/register-member", formData, { withCredentials: true }).then((res) => {
       console.log(formData);
       if(res.status === 200){
         toast.success(res.data.message);

@@ -27,7 +27,7 @@ const Login = (login) => {
     setLoading(true);
 
     // Replace this with real authentication logic
-    await axios.post("http://localhost:4000/auth/login", loginData, { withCredentials: true }).then((res) => {
+    await axios.post("https://www.abhifitness.me/auth/login", loginData, { withCredentials: true }).then((res) => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data));
       localStorage.setItem('islogin', true);

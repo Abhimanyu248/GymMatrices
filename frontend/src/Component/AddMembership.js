@@ -10,7 +10,7 @@ const AddMembership = () => {
 
 
   const fetchmemberships = async () => {
-    await axios.get("http://localhost:4000/plans/getmembership", { withCredentials: true }).then((res) => {
+    await axios.get("https://www.abhifitness.me/plans/getmembership", { withCredentials: true }).then((res) => {
       setMemberships(res.data.membership);
     }).catch((err) => {
       toast.error("Failed to fetch memberships!");
@@ -34,7 +34,7 @@ const AddMembership = () => {
       alert("Please fill in both fields!");
       return;
     }
-    await axios.post("http://localhost:4000/plans/addmembership", formData, { withCredentials: true }).then((res) => {
+    await axios.post("https://www.abhifitness.me/plans/addmembership", formData, { withCredentials: true }).then((res) => {
       console.log(res.data.message);
       toast.success(res.data.message);
       setFormData({ month: "", price: "" }); // Reset form
@@ -48,7 +48,7 @@ const AddMembership = () => {
   const handleDeleteMembership = async (id) => {
 
     try {
-      const res = await axios.delete(`http://localhost:4000/plans/deletemembership/${id}`, { withCredentials: true });
+      const res = await axios.delete(`https://www.abhifitness.me/plans/deletemembership/${id}`, { withCredentials: true });
       console.log(res.data.message);
       toast.success(res.data.message); // Success message
     } catch (error) {

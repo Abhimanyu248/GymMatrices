@@ -15,7 +15,7 @@ const RenewMembershipDialog = ({ onClose, onRenew }) => {
 
   //fetching membership
   const fetchmemberships = async () => {
-    await axios.get("http://localhost:4000/plans/getmembership", { withCredentials: true }).then((res) => {
+    await axios.get("https://www.abhifitness.me/plans/getmembership", { withCredentials: true }).then((res) => {
       setMembershiplist(res.data.membership);
       if(res.data.membership.length === 0){
         toast.error("No memberships found!");
